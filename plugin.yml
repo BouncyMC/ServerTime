@@ -1,0 +1,18 @@
+name: Global Time
+author: Staartvin
+website: http://dev.bukkit.org/server-mods/global-time/
+main: Staartvin.GlobalTime.GlobalTime
+version: 1.2.2
+description: Easy global time plugin.
+permissions:
+    globaltime.time:
+        description: Allows a player to get the global time.
+        default: op
+    globaltime.reload:
+        description: Allows a player to reload Global Time.
+        default: op
+commands:
+    globaltime:
+      description: Get the global time on the server. (System machine time)
+      usage: /<command>
+      aliases: [global_time, global, gt]
