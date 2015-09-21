@@ -49,7 +49,7 @@ public class GlobalTime extends JavaPlugin {
 
 		getConfig().addDefault("verboseLogging", true);
 		getConfig().addDefault("IntervalTime", 60);
-		getConfig().addDefault("BroadcastMessage", "§eCurrent Machine Time is §3(%timezone%) §4%time% §2%date%");
+		getConfig().addDefault("BroadcastMessage", "Â§eCurrent Machine Time is Â§3(%timezone%) Â§4%time% Â§2%date%");
 		
 		if (getConfig().getList("Global times") == null) {
 			getConfig().set("Global times", Arrays.asList(array));
@@ -76,7 +76,7 @@ public class GlobalTime extends JavaPlugin {
 				}
 				for (String timezone: getConfig().getStringList("Global times")) {
 					Calendar timezone_calendar = Calendar.getInstance(TimeZone.getTimeZone(timezone));
-					sender.sendMessage(ChatColor.GOLD + "Time is " + ChatColor.BLUE + formatTime(timezone_calendar) + ChatColor.GOLD + " in " + ChatColor.GRAY + timezone_calendar.getTimeZone().getDisplayName());
+					sender.sendMessage(ChatColor.GREEN + "Time in Adelaide, Australia:" + ChatColor.AQUA + formatTime(timezone_calendar) + ChatColor.YELLOW + formatDate(calendar));
 				}
 				return true;
 			}
